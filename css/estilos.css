@@ -217,14 +217,15 @@ body {
 }
 
 .videos__item:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     background-color: var(--azul-claro);
-    z-index: 2;
+    z-index: 1;
     transition: .5s;
 }
 
 .detalles__video h3 {
     font-weight: 700;
+    text-align: left;
     color: #444444;
 }
 
@@ -286,10 +287,6 @@ body {
         padding-right: 17px;
     }
 
-    .videos__item:hover {
-        transform: scale(1.3);
-    }
-
     /* ESTILOS RODAPIÉ */
 
     .rodapie__container {
@@ -311,6 +308,7 @@ body {
 
     .menu__lista {
         border-bottom: 1.5px solid var(--azul-medio);
+        padding: 15px 0;
     }
 
     /* ESTILOS VIDEOS */

@@ -6,6 +6,7 @@
     align-items: center;
     position: fixed;
     top: 0;
+    z-index: 2;
 }
 .cabecera__buscar__item{
     display: none;
@@ -17,6 +18,31 @@
     white-space: nowrap;
     overflow: scroll;
     gap: 15px;
+    z-index: 2;
+}
+/* Videos */
+.videos__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.videos__item {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 15px;
+}
+.descripcion-video {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+.detalles__video {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
 }
 /* Manu Lateral */
 .menu__container {
@@ -24,6 +50,7 @@
     height: 75px;
     position: fixed;
     bottom: 0;
+    z-index: 2;
 }
 .menu__lista {
     height: 100%;
@@ -50,14 +77,24 @@
     flex-flow: column wrap;
 }
 
-@media (min-width: 834px){
+@media (min-width: 834px) {
     /* Cabecera */
     .cabecera__container {
-        z-index: 1;
+        z-index: 3;
     }
     .cabecera__buscar__item {
         display: block;
     }
+    /* Videos */
+    .videos__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .videos__item {
+        width: 320px;
+    }
+
     /* Menu Lateral */
     .menu__container {
         width: 82px;
@@ -69,11 +106,44 @@
     .menu__lista {
         display: flex;
         flex-direction: column;
-        justify-content: right;
+        justify-content: flex-start;
         gap: 30px;
     }
     /*Pie de Página*/
     .rodapie__container{
         justify-content: space-between;
+    }
+    }
+
+@media (min-width: 1440px) {
+    /* Videos */
+    .videos__item {
+        width: 272px;
+    }
+    /* Menu Lateal */
+    .menu__container {
+        width: 245px;
+        overflow: scroll;
+        padding-left: 20px;
+    }
+    .menu__lista {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+        display: flex;
+    }
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+        flex-direction: column-reverse;
+    }
+    .menu__itens {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
     }
 }
